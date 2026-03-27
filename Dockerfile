@@ -1,7 +1,7 @@
 # ── Stage 1: Builder ─────────────────────────────────────────────────────────
 # rust:slim — Debian slim + Rust toolchain.
 # Includes gcc and make required to compile C code (libwebp bundled by the webp crate).
-FROM rust:slim AS builder
+FROM rust:slim-bookworm AS builder
 
 WORKDIR /app
 
