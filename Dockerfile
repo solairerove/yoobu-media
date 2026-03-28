@@ -27,8 +27,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/target/release/image-service /usr/local/bin/image-service
+COPY --from=builder /app/target/release/yoobu-media /usr/local/bin/yoobu-media
 
 EXPOSE 3000
 
-CMD ["image-service"]
+CMD ["yoobu-media"]

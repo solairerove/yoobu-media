@@ -74,7 +74,7 @@ async fn main() {
             std::process::exit(1);
         });
 
-    tracing::info!("image-service listening on port {port}");
+    tracing::info!("yoobu-media listening on port {port}");
 
     axum::serve(listener, app).await.unwrap();
 }

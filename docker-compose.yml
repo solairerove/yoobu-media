@@ -36,11 +36,11 @@ services:
         exit 0;
       "
 
-  image-service:
+  yoobu-media:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: yoobu-image-service
+    container_name: yoobu-media
     restart: unless-stopped
     ports:
       - "3000:3000"
