@@ -25,7 +25,7 @@ cargo build --release
 # Run locally (requires env vars — copy .env.example)
 INTERNAL_API_KEY=dev cargo run
 
-# Local dev with docker (minio + image-service)
+# Local dev with docker (minio + yoobu-media)
 docker compose up --build
 
 # Curl smoke test against local docker compose
@@ -79,4 +79,4 @@ See `.env.example`. Required: `INTERNAL_API_KEY`, `R2_ENDPOINT`, `R2_ACCESS_KEY`
 
 ## Deployment
 
-Railway: Dockerfile builder, service name `image-service` → internal URL `http://image-service.railway.internal:3000`. No public domain — private network only. `INTERNAL_API_KEY` is a shared Railway project variable (used by both this service and the Java API).
+Railway: Dockerfile builder, service name `yoobu-media` → internal URL `http://yoobu-media.railway.internal:3000`. No public domain — private network only. `INTERNAL_API_KEY` is a shared Railway project variable (used by both this service and the Java API).

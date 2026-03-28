@@ -88,8 +88,10 @@ cargo test auth::tests
 
 ## Full stack (docker compose)
 
-To run everything together uncomment the `image-service` block in `docker-compose.yml`:
+To run everything together uncomment the `yoobu-media` block in `docker-compose.yml`:
 
 ```bash
 docker compose up --build
 ```
+
+claude --resume d11dc0c1-0e6a-435c-a679-2467a6510deb
