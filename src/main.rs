@@ -39,7 +39,7 @@ async fn main() {
     tracing_subscriber::registry()
         .with(
             tracing_subscriber::EnvFilter::try_from_default_env()
-                .unwrap_or_else(|_| "image_service=debug,tower_http=debug".into()),
+                .unwrap_or_else(|_| "yoobu_media=debug,tower_http=debug".into()),
         )
         .with(tracing_subscriber::fmt::layer())
         .init();
