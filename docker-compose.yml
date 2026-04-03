@@ -55,7 +55,7 @@ services:
       # CDN_BASE_URL for local dev — MinIO public URL
       # In production: https://media.yoobu.app
       CDN_BASE_URL: http://localhost:9000/yoobu-media
-      RUST_LOG: image_service=debug,tower_http=debug
+      RUST_LOG: yoobu_media=debug,tower_http=debug
     depends_on:
       minio:
         condition: service_healthy
