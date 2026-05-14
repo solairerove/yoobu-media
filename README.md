@@ -6,7 +6,13 @@ Image service for yoobu. Accepts multipart image upload, converts to WebP, store
 
 ## Local development
 
-### 1. Start storage only (MinIO)
+### 1. Create the shared Docker network (once)
+
+```bash
+docker network create yoobu-net
+```
+
+### 2. Start storage only (MinIO)
 
 ```bash
 docker compose up minio minio-init
@@ -93,5 +99,3 @@ To run everything together uncomment the `yoobu-media` block in `docker-compose.
 ```bash
 docker compose up --build
 ```
-
-claude --resume d11dc0c1-0e6a-435c-a679-2467a6510deb
