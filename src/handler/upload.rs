@@ -29,7 +29,8 @@ pub async fn upload(
     let file_bytes = extract_file(&mut multipart).await?;
 
     if file_bytes.len() > state.config.max_file_size {
-        return Err(AppError::BadRequest("File exceeds 2 MB limit".into()));
+        let limit_mb = state.config.max_file_size / 1_048_576;
+        return Err(AppError::BadRequest(format!("File exceeds {limit_mb} MB limit")));
     }
 
     // Validate format via magic bytes before decoding

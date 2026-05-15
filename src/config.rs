@@ -36,7 +36,7 @@ impl Config {
             r2_region: env_optional("R2_REGION", "auto"),
             cdn_base_url: env_required("CDN_BASE_URL")?,
 
-            max_file_size: env_optional("MAX_FILE_SIZE", "2097152")
+            max_file_size: env_optional("MAX_FILE_SIZE", "4194304")
                 .parse()
                 .map_err(|e| format!("MAX_FILE_SIZE: {e}"))?,
 
